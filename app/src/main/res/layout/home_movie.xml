@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp">
+
+        <TextView
+            android:id="@+id/tv_popular_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="Popular Movie"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular_movie"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_popular_movie"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:id="@+id/pb_popular_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rv_popular_movie"
+            app:layout_constraintEnd_toEndOf="@id/rv_popular_movie"
+            app:layout_constraintStart_toStartOf="@id/rv_popular_movie"
+            app:layout_constraintTop_toTopOf="@id/rv_popular_movie" />
+
+        <TextView
+            android:id="@+id/tv_top_rated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="17dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="Top Rated Movie"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/rv_popular_movie" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_rated"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_top_rated"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:id="@+id/pb_top_rated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rv_top_rated"
+            app:layout_constraintEnd_toEndOf="@id/rv_top_rated"
+            app:layout_constraintStart_toStartOf="@id/rv_top_rated"
+            app:layout_constraintTop_toTopOf="@id/rv_top_rated" />
+
+        <TextView
+            android:id="@+id/tv_now_playing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingTop="17dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="Now Playing Movie"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/rv_top_rated" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_now_playing"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_now_playing"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:id="@+id/pb_now_playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/rv_now_playing"
+            app:layout_constraintEnd_toEndOf="@id/rv_now_playing"
+            app:layout_constraintStart_toStartOf="@id/rv_now_playing"
+            app:layout_constraintTop_toTopOf="@id/rv_now_playing" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
